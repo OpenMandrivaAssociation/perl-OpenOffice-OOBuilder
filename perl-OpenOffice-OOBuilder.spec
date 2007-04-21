@@ -1,7 +1,7 @@
 %define name perl-OpenOffice-OOBuilder
 %define pkgname OpenOffice-OOBuilder
 %define version 0.08
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Perl OO interface for creating OpenOffice documents
 Name:		%{name}
