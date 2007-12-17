@@ -14,7 +14,6 @@ Url:		http://search.cpan.org/dist/%{pkgname}/
 BuildRequires:	perl-devel
 BuildRequires:  perl(Archive::Zip)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
 
 %description
 This is a collection of modules to create OpenOffice documents. 
