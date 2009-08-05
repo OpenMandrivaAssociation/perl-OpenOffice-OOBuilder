@@ -1,20 +1,19 @@
-%define name perl-OpenOffice-OOBuilder
-%define pkgname OpenOffice-OOBuilder
-%define version 0.09
-%define release %mkrel 3
+%define upstream_name    OpenOffice-OOBuilder
+%define upstream_version 0.09
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Perl OO interface for creating OpenOffice documents
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/OpenOffice/%{pkgname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{pkgname}/
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OpenOffice/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:  perl(Archive::Zip)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This is a collection of modules to create OpenOffice documents. 
@@ -32,7 +31,7 @@ The modules present in this collection are:
       spreadsheets, documents with the sxc extension.
 
 %prep
-%setup -q -n %{pkgname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,4 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc README 
 %{perl_vendorlib}/
 %{_mandir}/*/*
-
