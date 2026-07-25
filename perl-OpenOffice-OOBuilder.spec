@@ -2,14 +2,14 @@
 %define upstream_version 0.09
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	6
 
 Summary:	Perl OO interface for creating OpenOffice documents
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/OpenOffice/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/OpenOffice-OOBuilder
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAYGILL/OpenOffice-OOBuilder-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
