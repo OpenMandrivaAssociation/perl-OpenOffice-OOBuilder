@@ -1,15 +1,13 @@
 %define upstream_name    OpenOffice-OOBuilder
-%define upstream_version 0.09
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.09
+Release:	7
 
 Summary:	Perl OO interface for creating OpenOffice documents
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/OpenOffice-OOBuilder
-Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAYGILL/OpenOffice-OOBuilder-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/M/MA/MAYGILL/OpenOffice-OOBuilder-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -32,7 +30,7 @@ The modules present in this collection are:
       spreadsheets, documents with the sxc extension.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -55,9 +53,7 @@ make test
 
 * Wed Aug 05 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.90.0-1mdv2011.0
 + Revision: 410066
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.09-3mdv2009.0
+- rebuild using %0.09 Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0.09-3mdv2009.0
 + Revision: 241809
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
